@@ -1,0 +1,55 @@
+---
+title: "Fun Application for Course Project: Shiny Application and Reproducible Pitch"
+author: "Gongyao Wang"
+date: "February 25, 2018"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE)
+```
+
+
+## Introduction
+- This Fun Application was built for the course project: Shiny Application and Reproducible Pitch. This Application is providing you some ways to predict the Horsepower based on MPG. It includes two parts: (1) Shiny Application and (2) Reproducible Pitch Presentation.
+
+- My developed Shiny Application is avalilable at: https://gwangshare.shinyapps.io/funapp/
+
+- My Source code for ui.R and server.R files are available on the GitHub repo: https://github.com/gongyaowang/course9assignment3
+
+
+## Fun Application Functions {.smaller}
+The main functions include:
+
+1. you can choose options to customize the figure.
+    + Show/Hide X Axis Label
+    + Show/Hide Y Axis Label
+    + Show/Hide Title
+2. you have options to adjust models.
+    + Show/Hide Model 1 line
+    + Show/Hide Model 2 line
+    + MPG number for Model 2 (Ranging from 17 to 25), which you can use to find the best model.
+3. You can get the predicted Horsepower for your models based on the MPG that you sleceted.
+
+
+## Dataset for the Current Application {.smaller}
+
+The mtcars dataset used in the application comes from the Motor Trend Car Road Tests data. Here is the data summary:
+```{r}
+summary(mtcars)
+```
+
+## Data Plot
+Here is the data plot for the models (1. polynomial, 2. two linear).
+```{r}
+plot(mtcars$mpg, mtcars$hp, xlab = "Miles Per Gallon",
+    ylab = "Horsepower", main = "Car MPG vs. Horsepower Models", 
+    bty = "n", pch = 16, xlim = c(10, 35), ylim = c(50, 350))
+
+```
+
+
+
+
+
+
